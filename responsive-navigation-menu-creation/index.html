@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn how to make a responsive navigation menu. Learn how to add a hamburger button for a mobile screen and write codes for its functionalities."
+    />
+    <title>How to make a responsive navigation menu (complete guide)</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="secondsection">
+      <div class="secondsectioninside">
+        <div class="logoandname">
+          <a href="../index.html"
+            ><img
+              src="../resources/cup-hot.svg"
+              width="32px"
+              height="32px"
+              style="margin-top: 12px"
+              alt="website logo"
+          /></a>
+          <a href="../index.html" class="name"
+            ><p id="ayan">I'm Ayan Mallik</p></a
+          >
+        </div>
+        <div class="menus">
+          <a href="../index.html" status="off" id="thehomemenu">Home</a>
+          <a href="../about/index.html" status="off" id="aboutmenu">About</a>
+          <a
+            href="../index.html#theprojectheading"
+            status="off"
+            id="projectmenu"
+            >Projects</a
+          >
+
+          <a href="../public/blogs.html" status="off" id="blogmenu">Blog</a>
+        </div>
+
+        <div class="mobilemenu">
+          <div class="hamburger">
+            <div switch="off" class="ham1 burgerinside"></div>
+            <div switch="off" class="ham2 burgerinside"></div>
+            <div switch="off" class="ham3 burgerinside"></div>
+          </div>
+          <div class="mobilemenuinside">
+            <div class="mobilemenucontent1">
+              <ul class="mobilemenus" id="mobilecontents" switch="off">
+                <li id="firstlistitem">
+                  <a
+                    href="../index.html"
+                    class="mobilemenuanchors"
+                    id="mobilecontent1"
+                    status="off"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../about/index.html"
+                    class="mobilemenuanchors"
+                    id="mobilecontent2"
+                    status="off"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../index.html#theprojectheading"
+                    class="mobilemenuanchors"
+                    id="mobilecontent3"
+                    status="off"
+                    >Projects</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../public/blogs.html"
+                    class="mobilemenuanchors"
+                    id="mobilecontent4"
+                    status="off"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <! --tindog description section -->
+    <div class="tindogsectiontindogpage">
+      <div class="topsectionfull">
+        <div class="background">
+          <h1>How to make a navigation menu for all screen sizes?</h1>
+        </div>
+        <div class="thepicture">
+          <img
+            src="../resources/pexels-image.jpg"
+            alt="man sitting infront of three computers"
+            class="projectimageineachproject"
+          />
+        </div>
+      </div>
+      <div class="tindogsectioninsidetindogpage">
+        <p class="tindogpagepara">
+          Ever struggled with a website's menu that just won't cooperate on your
+          phone or tablet? Creating a responsive navigation menu is the key to
+          solving this puzzle. In this article, I'll break down the steps of
+          crafting a responsive navigation menu, to ensure your website looks
+          great and works smoothly on any device. Let's dive in!
+        </p>
+        <div class="tableofcontents">
+          <div class="tableinside">
+            <span id="table">Table of Contents</span>
+          </div>
+          <ol id="tablelist"></ol>
+        </div>
+        <h2 class="tindogpageheadingtwo">
+          Let's make a general navigation menu first
+        </h2>
+        <p class="tindogpagepara">
+          Let the fun begin! We will start with making a general navigation
+          menu. We will be using simple HTML, CSS, and JavaScript. So, let's go!
+        </p>
+        <h3>What is a navigation menu?</h3>
+        <p class="tindogpagepara">
+          The menu that helps you navigate to products and services pages from
+          the top of a web page is a navigation Menu.<br />
+          For example, here is the navigation menu of GitHub:
+        </p>
+        <img
+          src="../resources/navigation-menu-sample.png"
+          alt="navigation menu of github"
+        />
+        <h3>What is the purpose of a navigation menu?</h3>
+        <p class="tindogpagepara">
+           To help your clients navigate to your products and services pages.
+          Make it responsive so it can serve its purpose better.
+        </p>
+        <h3>Let's write the HTML</h3>
+        <p class="tindogpagepara">
+          We list products and services on our navigation menu. Assume your
+          website name is XYZ. You sell product 1 and product 2.<br />
+          Your website name will remain unchanged in responsive situations. But
+          the appearance of your products and services may change. So, always
+          use a different class for elements that may change in appearance. And
+          keeping all of them inside a div element like this:
+        </p>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="html,result"
+            data-slug-hash="RwdrPrM"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/RwdrPrM"> image1</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          looks ugly? I know. Let's add some CSS now to make it look decent
+          enough to use on your website.
+        </p>
+        <h3>Styling the navigation with CSS</h3>
+        <p class="tindogpagepara">
+          Look into the Code above. <br />
+          ".wholesection" div has two children div elements. Let's make it
+          display flex in the CSS. Also, the anchor tags (the nav links) need
+          some styling. I have set "pink" as the background color here. Feel
+          free to change it.
+        </p>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="html"
+            data-slug-hash="BabjmVK"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/BabjmVK"> image 2</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Looks better now! But there is a problem. The navigation menu is not
+          responsive. On a mobile screen, all the elements will come too close
+          to each other.
+        </p>
+        <h2 class="tindogheadingtwo">
+          A big concern of Web Design: responsiveness
+        </h2>
+        <p class="tindogpagepara">
+          Responsiveness is one of the biggest concerns of web development.
+          Always ensure that the menu items are visible in all screen sizes.
+          That will improve your user experience score and improve your SEO
+          ranking.
+        </p>
+        <h3>What are the different screen sizes?</h3>
+        <p class="tindogpagepara">
+          Smartphones have the smallest screen width (up to 430px or smaller).
+          Then, comes tablets and iPads (bigger than 430px and smaller than
+          1024px). Then, there is the desktop screen (generally bigger than
+          1024px and can be up to 3840px).<br />
+          The most popular Smartphone screen size is 360px X 800px (width X
+          height). The most popular tablet screen size is 768px by 1024px. The
+          most popular desktop screen size is 1920px by 1080px. Check out the
+          <a
+            href="https://gs.statcounter.com/screen-resolution-stats"
+            target="_blank"
+            >screen resolution stats by StatCounter</a
+          >
+          for additional information.
+        </p>
+        <h2 class="tindogheadingtwo">
+          Let's make it responsive for tablet and PC screen sizes
+        </h2>
+        <p class="tindogpagepara">
+          We will use
+          <a
+            href="https://www.w3schools.com/css/css3_mediaqueries.asp"
+            target="_blank"
+            >media queries</a
+          >
+          to make it responsive. Media queries will trigger different CSS rules
+          for different screen sizes.
+        </p>
+        <h3>Make it responsive for tablet/iPad</h3>
+        <p class="tindogpagepara">
+          Tablet and iPad screen width ranges between 431px and 1024px. Let's
+          make one media query for tablet screen sizes. I will make bigger space
+          in between the products. For that, I have to declare the minimum
+          screen width and maximum screen width in the media queries. See how I
+          write the media queries rule in the CSS.
+        </p>
+        <h4>Achieve it with CSS</h4>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="html"
+            data-slug-hash="xxBZWKp"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/xxBZWKp"> image 3</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <div class="noteinarticle firstnotesection">
+          <p class="tindogpagepara">Inside the CodePen preview section,</p>
+          <ol type="1">
+            <li style="list-style: decimal">
+              tap the "Result" tab and click "Run Pen" to see the preview.
+            </li>
+            <li style="list-style: decimal">
+              Tap the "HTML", "CSS", "JS" to view the codes.
+            </li>
+            <li style="list-style: decimal">
+              While they are tapped, you will see the preview for mobile on the
+              "Result" tab.
+            </li>
+            <li style="list-style: decimal">
+              Untap the "HTML", "CSS", "JS" to see the preview for a desktop
+              screen.
+            </li>
+          </ol>
+        </div>
+        <p class="tindogpagepara">
+          As you can see, The media query has overwritten the initial flex gap
+          value of 10px with a 20px gap.
+        </p>
+        <h3>Make it responsive for Desktop</h3>
+        <p class="tindogpagepara">
+          Desktop screen size typically ranges between 1025px to 3840px. That's
+          a pretty long range. Thus, I suggest you use multiple media queries.
+          For desktop screen, you may want to do the following:
+        </p>
+        <ol type="1">
+          <li style="list-style: decimal">
+            Increase the height of the navigation bar.
+          </li>
+          <li style="list-style: decimal">
+            Increase the font size a little bit.
+          </li>
+        </ol>
+
+        <p class="tindogpagepara">Let's do that!</p>
+        <h4>Achieve it with CSS</h4>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css"
+            data-slug-hash="MWxKxWb"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/MWxKxWb"> image 4</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          I have used two media queries here.<br />
+          When the media query triggers, it still shows flex.<br />
+          But, media queries overwritten the gap value for the desktop screen.
+        </p>
+        <h2 class="tindogheadingtwo">Make it responsive for mobile</h2>
+        <p class="tindogpagepara">
+          Here comes the juicy part.<br />
+          To make the navbar responsive on mobile devices; you will need to do
+          the following.
+        </p>
+        <ol type="1">
+          <li style="list-style: decimal">
+            transform the desktop navbar into a mobile navbar.
+          </li>
+          <li style="list-style: decimal">
+            hide it with transform(X) CSS rule.
+          </li>
+          <li style="list-style: decimal">
+            make a hamburger button on the top of the screen.
+          </li>
+          <li style="list-style: decimal">
+            add functionalities of the hamburger button. (more on that later)
+          </li>
+        </ol>
+        <p class="tindogpagepara">
+          We will achieve all these functionalities with HTML, CSS, and
+          JAVASCRIPT. So, let's go!
+        </p>
+        <h3>Transform the desktop navbar into a mobile navbar</h3>
+        <p class="tindogpagepara">
+          Inside the code, <br />the div element with the .menus class shows the
+          menus. Simply change the flex-direction from row to column. That will
+          make it appear as a mobile navbar. We will increase the width as well.
+          We will give a higher Z-index value. That will make it appear above
+          the other contents on the web page.<br />
+          Before that, we need to give the div element a fixed position.<br />
+          Why fixed position? <br />It's because we want to position it from the
+          position of the viewport. Giving a fixed position cuts the element
+          from normal HTML flow. So, we can customize the appearance of the div
+          element much more effectively.
+          <span style="font-weight: 600"
+            >It will be preciously a fixed pixel far from the viewport!</span
+          >
+        </p>
+        <h4>Achieve it with the CSS</h4>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="OJqMeQV"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/OJqMeQV"> image 5</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Check the "Result" section.<br />
+          We have successfully transformed the navigation menu for a mobile
+          screen!
+        </p>
+
+        <h3>next step: transform the mobile menu</h3>
+        <p class="tindogpagepara">
+          As you can see, the mobile menu bar is visible without having to click
+          on any hamburger button. So, we will transform the mobile menu by 100%
+          as per the X-axis. This will hide the mobile menu on the right side.
+          (because I have set the HTML overflow-X to "hidden")
+        </p>
+        <h4>writing the CSS</h4>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="mdoPbmx"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/mdoPbmx"> image 6</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Now, the navbar is hidden on a mobile screen!
+        </p>
+        <h3>last step: put a mobile hamburger button</h3>
+        <p class="tindogpagepara">
+          Now, we need a hamburger button to access the mobile navbar.<br />
+          Just in case you are wondering, here is the hamburger button of GitHub
+          on a mobile screen:
+        </p>
+        <img
+          src="../resources/navigation-menu-sample2.png"
+          alt="hamburger button on GitHub"
+        />
+        <p class="tindogpagepara">
+          The hamburger button generally has a fixed top-right position on the
+          mobile viewport. In the next section, we will be creating one!
+        </p>
+        <h4>Make a Hamburger Button</h4>
+        <p class="tindogpagepara">
+          The hamburger button contains three div elements.  They are placed
+          column-wise with some gap in between them. We will use HTML and CSS to
+          make it.
+        </p>
+        <h5>What to do in HTML?</h5>
+        <p class="tindogpagepara">
+          We will make a div called hamburger. We will create three child div
+          elements inside of the parent div element.
+        </p>
+        <h5>What to do in CSS?</h5>
+
+        <ol type="1">
+          <li style="list-style: decimal">
+            We will display the hamburger div as a flexbox. 
+          </li>
+          <li style="list-style: decimal">
+            We will set the flex-direction to column. 
+          </li>
+          <li style="list-style: decimal">
+            Then, we will give some gaps ( say 4px gap) between them. 
+          </li>
+          <li style="list-style: decimal">
+            We will declare the height, width, and color of the child div
+            elements.
+          </li>
+          <li style="list-style: decimal">
+            We will hide the hamburger button for big screens through media
+            queries.
+          </li>
+        </ol>
+        <p class="tindogpagepara">See the code below:</p>
+        <h5>CodePen preview</h5>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="LYaNZZm"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/LYaNZZm"> image 7</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Do you see the hamburger button?<br />
+          It's on the right side now! <br />
+          Now;
+        </p>
+        <ol type="1">
+          <li style="list-style: decimal">
+            the hamburger button is visible on a mobile screen.
+          </li>
+          <li style="list-style: decimal">
+            the hamburger button is not visible for a screen width bigger than
+            430px.
+          </li>
+        </ol>
+        <h4>Add the functionalities </h4>
+        <p class="tindogpagepara">
+          Up to now, we only have been able to place the hamburger button.
+          However, four functionalities are missing. Those are:
+        </p>
+        <ol type="1">
+          <li style="list-style: decimal">
+            once you click the button, the child div elements should rotate and
+            form an "X" sign.
+          </li>
+          <li style="list-style: decimal">the mobile menu should pop open.</li>
+          <li style="list-style: decimal">
+            once you click again, the child div elements should undo the
+            rotation and appear on its previous shape.
+          </li>
+          <li style="list-style: decimal">
+            the mobile menu has gone invisible to the right side of the screen.
+          </li>
+        </ol>
+        <h5>making of "X" sign by rotation</h5>
+        <p class="tindogpagepara">
+          Whenever we add functionality, we need some JavaScript. So, connect
+          your HTML page with your empty external JavaScript page first. Now we
+          will write some JavaScript code.
+        </p>
+        <h6>what to do in HTML</h6>
+        <p class="tindogpagepara">
+          Write some attribute to those child div elements of the hamburger
+          button. We want to change those attribute data with JavaScript for the
+          functionality.
+        </p>
+        <h6>what to do in JavaScript</h6>
+        <ol type="1">
+          <li style="list-style: decimal">
+            we will use the " querySelector " to target the parent .hamburger
+            div element and save it as a constant.
+          </li>
+          <li style="list-style: decimal">
+            we will use the " eventListener " to listen for the "click" event on
+            the parent .hamburger div element.
+          </li>
+          <li style="list-style: decimal">
+            once the "click" event occurs, we will run an anonymous function.
+          </li>
+          <li style="list-style: decimal">
+            Inside the anonymous function, there will be an "if-else" statement.
+            If the first child has the "rotation" attribute value set to "off",
+            it will be changed to "on". Else, if it is set to "on", as a
+            response to the "click" event, it will be set to "off".
+          </li>
+        </ol>
+        <p class="tindogpagepara">
+          So, each time "click" happens, the attribute data will toggle between
+          "on" and "off" with JavaScript.
+        </p>
+        <h6>what to do in CSS</h6>
+        <p class="tindogpagepara">
+          Write CSS for the child div elements with [ rotation= "on"]. Because,
+          We will rotate the top and bottom child div elements. Also, write CSS
+          for the middle child div element with [ display= "off"]. Because, we
+          will hide the middle div once the "click" happens on the hamburger
+          button. This is how we will make that "X" sign. <br />Now check out my
+          code:
+        </p>
+        <h6>CodePen preview</h6>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="LYaNOEQ"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/LYaNOEQ"> image 8</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Now, click the hamburger button inside the "result" and see what
+          happens.<br />
+          Do you see the "X" sign? <br />Good!
+        </p>
+        <h5>making the mobile menu appear on the screen</h5>
+        <p class="tindogpagepara">
+          Now, the hamburger button is rotating. It looks fancy but does not
+          show the mobile navigation menu. We will need to add this little
+          functionality using a small JavaScript code.
+        </p>
+        <h6>what to do in HTML</h6>
+        <p class="tindogpagepara">
+          <span id="embrase2"
+            >The div element with the .menus class shows the navigation
+            menu.</span
+          >
+          Previously, we gave it the transform rule in the CSS. However, we want
+          to undo the transform rule once we click the hamburger button. For
+          that, we will give that div element a new attribute and attribute
+          value as we did earlier.
+        </p>
+        <h6>what to do in JavaScript</h6>
+        <p class="tindogpagepara">
+          I have saved that div element as a Constant named "navigationMenu" in
+          JavaScript.<br />
+          Inside the " eventListener ",<br />
+          after the "click" happens, we will change the attribute data of the
+          hamburger button. We will do that using the "setAttribute"
+          functionality.
+        </p>
+        <h6>what to do in CSS</h6>
+        <p class="tindogpagepara">
+          We will write CSS rule of the ".menus" div with its new attribute
+          data. In the CSS rule, we will undo the transform rule.
+        </p>
+        <h6>CodePen preview</h6>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="BabKmeK"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/BabKmeK"> image 9</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Now, try clicking on the hamburger button. That will bring the mobile
+          menu to the screen.<br />
+        </p>
+        <div class="noteinarticle">
+          <p class="tindogpagepara">
+            Did you notice? <br />I did not write additional JavaScript code to
+            close the mobile navigation menu. But it is working fine. That is
+            because I used the "if-else" statement in the JavaScript.<br />
+            So, when the navigation menu is visible, it has the attribute data
+            for the "mobile view" set to "on". If you click again, the "if-else"
+            statement will change the attribute data to "off" again. Once it is
+            "off", the general CSS will be applicable.
+          </p>
+        </div>
+
+        <h2 class="tindogpageheadingtwo">what is a "sticky" navigation bar?</h2>
+        <p class="tindogpagepara">
+          A navigation bar with a fixed position as you scroll down the web page
+          is called a "sticky" navigation bar. A "sticky" navigation bar remains
+          visible on the screen during your web session. I give you my example.
+          The navigation bar of my portfolio is the "sticky" one.
+        </p>
+        <h3>how to make the navigation bar "sticky"</h3>
+        <p class="tindogpagepara">
+          There are multiple ways to do that. <br />
+          But the simplest way is by only using the CSS.
+        </p>
+        <h4>Let's do it</h4>
+        <p class="tindogpagepara">
+          You just give your navigation bar the "fixed" position. And that's it!
+        </p>
+        <h5>only with CSS</h5>
+        <p class="tindogpagepara">
+          Let's give the div element with the ".wholesection" class a fixed
+          position. And the job is done!
+        </p>
+        <h5>Preview</h5>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="GReZzZM"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/GReZzZM"> image 10</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Try scrolling the "Result" section down. The mobile navbar now has
+          become "Sticky".
+        </p>
+        <div class="noteinarticle">
+          <p class="tindogpagepara note">
+            Note: if you have advertisements or any content above your
+            navigation menu, consider making that element "sticky" as well.
+            Otherwise, it may not be properly visible.
+          </p>
+        </div>
+        <h4>I want a non-sticky navigation bar</h4>
+        <p class="tindogpagepara">
+          In that case, you have to avoid using fixed positioning of any HTML
+          element. You can use absolute positioning instead.
+          <span
+            >Absolute positioning is the positioning of an HTML element from its
+            closest parent element that has relative positioning.</span
+          >
+          Hence, it won't be positioned from the viewport anymore.
+        </p>
+        <h5>Changes to do in HTML</h5>
+        <p class="tindogpagepara">
+          We will put the .hamburger div inside the ".wholesection" div that
+          contains the navigation menu. Why? Because we will give .hamburger div
+          absolute positioning to make it non-sticky.
+        </p>
+        <h5>Changes to do in JavaScript</h5>
+        <p class="tindogpagepara">
+          No changes are required in JavaScript in this case.
+        </p>
+        <h5>Changes to do in CSS</h5>
+        <p class="tindogpagepara">Simply do this two things:</p>
+        <ol type="1">
+          <li style="list-style: decimal">
+            give the parent the ".wholesection" div relative position.
+          </li>
+          <li style="list-style: decimal">
+            give the child .hamburger div absolute position with right and top
+            value. That will make the child div position itself from the parent
+            div.
+          </li>
+        </ol>
+        <p class="tindogpagepara">
+          No longer it will be positioned as per the viewport.
+        </p>
+        <h5>Preview</h5>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="bGZeWwv"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/bGZeWwv"> image 11</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Now, we have made a "non-sticky" navigation bar successfully.
+        </p>
+        <h2 class="tindogpageheadingtwo">How to make a dropdown menu?</h2>
+        <p class="tindogpagepara">There are some simple steps:</p>
+        <ol type="1">
+          <li style="list-style: decimal">
+            Include the dropdown content in the HTML file.
+          </li>
+          <li style="list-style: decimal">
+            Style it using CSS and set the display to none.
+          </li>
+          <li style="list-style: decimal">Include a dropdown button.</li>
+          <li style="list-style: decimal">
+            Use JavaScript to listen for the click event in that drop-down
+            button.
+          </li>
+          <li style="list-style: decimal">
+            Once the "click" happens, change the attribute of the HTML element
+            using JavaScript.
+          </li>
+          <li style="list-style: decimal">
+            Write CSS for the element with the changed attribute value. And
+            style the drop-down appearance.
+          </li>
+        </ol>
+        <h3>what to do in HTML?</h3>
+        <ol type="1">
+          <li style="list-style: decimal">
+            Include the categories in the HTML file, including
+            <a
+              href="https://icons.getbootstrap.com/icons/caret-down/"
+              target="_blank"
+              >the caret-down logo</a
+            >
+            . Put them inside a div called .category.
+          </li>
+          <li style="list-style: decimal">
+            Give each product and the Caret down logo a unique ID name.
+          </li>
+          <li style="list-style: decimal">
+            give the div element of .subcategory class a new attribute. We want
+            to change its attribute dynamically.
+          </li>
+          <li style="list-style: decimal">
+            I also gave a new attribute to the second product. We will change
+            its attribute data on the "click" event as well.
+          </li>
+        </ol>
+        <h3>what to do in JavaScript?</h3>
+        <ol type="1">
+          <li style="list-style: decimal">
+            Save the category section, subcategory, first product, second
+            product, and the drop-down button as variables.
+          </li>
+          <li style="list-style: decimal">
+            Add an event listener for the drop-down button.
+          </li>
+          <li style="list-style: decimal">
+            Once "click" happens, run a "if-else" statement.
+          </li>
+          <li style="list-style: decimal">
+            Inside the statement; if the attribute value of "display" is "off",
+            set it to "on" and vice versa.
+          </li>
+          <li style="list-style: decimal">
+            Inside the statement, if the screen width is smaller(mobile
+            screen), <span id="embrase">also </span>
+            set the " display mobile category " attribute data to "on" for the
+            second product. That will make the second product appear properly on
+            the mobile screen.
+          </li>
+        </ol>
+        <h3>What to do in CSS?</h3>
+        <p class="tindogpagepara">
+          Give the respective CSS for the changed attribute data. Style how you
+          want your categories and sub-categories to appear on a mobile screen
+          once the attribute data is "on". Check the code below:
+        </p>
+        <h3>Preview</h3>
+        <div class="codepen">
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="dark"
+            data-default-tab="css,result"
+            data-slug-hash="ZEPpgxX"
+            data-preview="true"
+            data-editable="true"
+            data-user="Ayan-Mallik"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/Ayan-Mallik/pen/ZEPpgxX"> image 12</a>
+              by Ayan Mallik (<a href="https://codepen.io/Ayan-Mallik"
+                >@Ayan-Mallik</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <p class="tindogpagepara">
+          Now, check the functionality of the drop-down button for both the
+          mobile and desktop screens.<br />
+          Are they working ?<br />
+          Sweet!
+        </p>
+        <p class="tindogpagepara">
+          Now, we have a responsive navigation bar that shows all its
+          sub-categories.
+        </p>
+        <h2 class="tindogpageheadingtwo">
+          the source code to play around with
+        </h2>
+        <p class="tindogpagepara">
+          Now is the time to play around. Download my source code for the sticky
+          version and non-sticky version of the navigation menus and play
+          around. You learn more when you play around.
+        </p>
+        <div class="calltoaction">
+          <button class="calltoactionbutton" id="thestickynavbutton">
+            Sticky Navigation Menu
+          </button>
+          <button class="calltoactionbutton" id="thenonstickynavbutton">
+            Non-Sticky Navigation Menu
+          </button>
+        </div>
+        <h2 class="tindogpageheadingtwo">F.A.Q</h2>
+        <h3>Should I use div or nav?</h3>
+        <p class="tindogpagepara">You can use either of them. No problem!</p>
+        <h3>How many media queries should I use?</h3>
+        <p class="tindogpagepara">
+          There is no hardcore rule for that. But try to keep 4-8 media queries
+          for decent responsiveness of the page.
+        </p>
+        <h3>Should I use Flexbox or Grid?</h3>
+        <p class="tindogpagepara">
+          I prefer using Flexbox for styling the content.
+        </p>
+        <h3>Can I use the hamburger icon instead?</h3>
+        <p class="tindogpagepara">
+          Sure! You can use the icon instead of making one.
+        </p>
+        <h3>How can I create a responsive navigation menu using only CSS?</h3>
+        <p class="tindogpagepara">
+          That is not possible! You cannot add functionalities with CSS, such as
+          opening the navigation menu with a click on the Hamburger button.
+          <br />
+        </p>
+        <span id="credit">Credits</span>
+        <p class="tindogpagepara creditpara">
+          Photo by
+          <a
+            href=" https://www.pexels.com/photo/man-sitting-in-front-of-three-computers-4974915/"
+            target="_blank"
+          >
+            olia danilevich.</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <! --11 Footer section -->
+    <div class="fullfooter">
+      <div class="footerinside">
+        <div class="footernameandlogo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-cup-hot"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              fill-rule="evenodd"
+              d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5M2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175Z"
+            />
+            <path
+              style="color: white"
+              d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"
+            />
+          </svg>
+          <h4 class="footertexts">I'm Ayan Mallik</h4>
+        </div>
+        <p class="footerpara">
+          I will be looking forward to hearing from you.<br />Good day!
+        </p>
+        <h4
+          class="shareportfolio footertexts lightheading"
+          id="shareportfolioheading"
+        >
+          Share this article
+        </h4>
+        <div class="sharediv">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            id="sharetolinkdin"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-twitter"
+            id="sharetotwitter"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-facebook"
+            id="sharetofacebook"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="quicklinksfooter">
+        <h4 class="footertexts lightheading">Quick links</h4>
+        <ul class="footerul">
+          <li class="footerlistitems">
+            <a href="../public/blogs.html" style="color: white" target="_blank"
+              >Blog</a
+            >
+          </li>
+          <li class="footerlistitems">
+            <a href="" style="color: white" target="_blank">About</a>
+          </li>
+          <li class="footerlistitems">
+            <a href="../index.html#theprojectheading" style="color: white"
+              >Projects</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="followfooter">
+        <h4 class="footertexts lightheading">Contact me</h4>
+        <div class="emailfooter">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-envelope"
+            id="emailfootersvg"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+            />
+          </svg>
+          <a href="mailto:akm.ayan7001@gmail.com" class="footerancher"
+            >akm.ayan7001@gmail.com</a
+          >
+        </div>
+        <div class="callfooter">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+            />
+          </svg>
+          <a href="tell:+919932208604" class="footerancher">+919932208604</a>
+        </div>
+        <h4 class="footertexts lightheading followfootersection">Follow me</h4>
+        <div class="footerfollow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin footerfollowlogo linkedinfooterlogo"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-twitter footerfollowlogo twitterfooterlogo"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-facebook footerfollowlogo facebookfooterlogo"
+            viewBox="0 0 16 16"
+          >
+            <path
+              style="color: white"
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="footerend">
+      <p class="footerendtext">Copyright © 2023</p>
+    </div>
+
+    <script src="./index.js" charset="utf-8"></script>
+  </body>
+</html>
