@@ -48,7 +48,7 @@ let theProgressbar = document.querySelector(".progressing");
 let viewportToProgressbarHeight = theProgressbar.offsetTop;
 
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeight - window.scrollY <= 840) {
+  if (viewportToProgressbarHeight - window.scrollY <= 670) {
     theProgressbar.setAttribute("switch", "on");
     document.querySelector(".extrasmallpara").setAttribute("switch", "on");
   }
@@ -59,7 +59,7 @@ let theProgressbarTwo = document.querySelector(".progressingtwo");
 let viewportToProgressbarHeightTwo = theProgressbarTwo.offsetTop;
 console.log(viewportToProgressbarHeightTwo, window.scrollY);
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeightTwo - window.scrollY <= 820) {
+  if (viewportToProgressbarHeightTwo - window.scrollY <= 670) {
     theProgressbarTwo.setAttribute("switch", "on");
     document.querySelector(".extrasmallparatwo").setAttribute("switch", "on");
   }
@@ -70,7 +70,7 @@ let theProgressbarThree = document.querySelector(".progressingthree");
 let viewportToProgressbarHeightThree = theProgressbarThree.offsetTop;
 console.log(viewportToProgressbarHeightThree, window.scrollY);
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeightThree - window.scrollY <= 800) {
+  if (viewportToProgressbarHeightThree - window.scrollY <= 670) {
     theProgressbarThree.setAttribute("switch", "on");
     document.querySelector(".extrasmallparathree").setAttribute("switch", "on");
   }
@@ -80,7 +80,7 @@ document.addEventListener("scroll", function () {
 let theProgressbarFour = document.querySelector(".progressingfour");
 let viewportToProgressbarHeightFour = theProgressbarFour.offsetTop;
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeightFour - window.scrollY <= 800) {
+  if (viewportToProgressbarHeightFour - window.scrollY <= 645) {
     theProgressbarFour.setAttribute("switch", "on");
     document.querySelector(".extrasmallparafour").setAttribute("switch", "on");
   }
@@ -90,7 +90,7 @@ document.addEventListener("scroll", function () {
 let theProgressbarFive = document.querySelector(".progressingfive");
 let viewportToProgressbarHeightFive = theProgressbarFive.offsetTop;
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeightFive - window.scrollY <= 800) {
+  if (viewportToProgressbarHeightFive - window.scrollY <= 645) {
     theProgressbarFive.setAttribute("switch", "on");
     document.querySelector(".extrasmallparafive").setAttribute("switch", "on");
   }
@@ -99,7 +99,7 @@ document.addEventListener("scroll", function () {
 let theProgressbarSix = document.querySelector(".progressingsix");
 let viewportToProgressbarHeightSix = theProgressbarSix.offsetTop;
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeightSix - window.scrollY <= 800) {
+  if (viewportToProgressbarHeightSix - window.scrollY <= 645) {
     theProgressbarSix.setAttribute("switch", "on");
     document.querySelector(".extrasmallparasix").setAttribute("switch", "on");
   }
@@ -108,7 +108,7 @@ document.addEventListener("scroll", function () {
 let theProgressbarSeven = document.querySelector(".progressingseven");
 let viewportToProgressbarHeightSeven = theProgressbarSeven.offsetTop;
 document.addEventListener("scroll", function () {
-  if (viewportToProgressbarHeightSeven - window.scrollY <= 900) {
+  if (viewportToProgressbarHeightSeven - window.scrollY <= 645) {
     theProgressbarSeven.setAttribute("switch", "on");
     document.querySelector(".extrasmallparaseven").setAttribute("switch", "on");
   }
